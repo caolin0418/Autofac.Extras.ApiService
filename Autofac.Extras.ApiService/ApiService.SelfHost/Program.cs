@@ -17,7 +17,6 @@ namespace ApiService.SelfHost
             using (var server = new HttpSelfHostServer(new HttpSelfHostConfiguration("http://localhost:10000")))
             {
                 var builder = new ContainerBuilder();
-
                 server.Configuration.InitApiService(builder);
                 builder.RegisterAssemblyTypes(typeof(UserSvc).Assembly).AsImplementedInterfaces().AsSelf();
                 var container = builder.Build();
