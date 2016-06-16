@@ -12,7 +12,7 @@ namespace Autofac.Extras.ApiService
 {
     internal class HttpControllerSelect : IHttpControllerSelector
     {
-        private HttpConfiguration _configuration;
+        private readonly HttpConfiguration _configuration;
 
         public HttpControllerSelect(HttpConfiguration configuration)
         {

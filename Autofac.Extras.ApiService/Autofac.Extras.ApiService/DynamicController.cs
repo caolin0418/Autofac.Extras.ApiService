@@ -15,11 +15,21 @@ namespace Autofac.Extras.ApiService
             this._serviceAction = serviceAction;
         }
 
+        [HttpGet]
+        public string Index()
+        {
+            return "HelloWorld";
+        }
+
         public async Task<object> Post()
         {
             var values = Configuration.Routes.GetRouteData(Request).Values;
             var service = values["service"].ToString();
             var method = values["method"].ToString();
+            if (service == "" && method == "Index")
+            {
+                return Index();
+            }
             var data = await Request.Content.ReadAsStringAsync();
             return _serviceAction.Action(service, method, data);
         }

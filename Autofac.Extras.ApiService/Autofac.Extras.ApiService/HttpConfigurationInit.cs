@@ -13,7 +13,11 @@ namespace Autofac.Extras.ApiService
     {
         public static void InitApiService(this HttpConfiguration config, ContainerBuilder builder)
         {
-            config.Routes.Add("api", new HttpRoute("api/svc/{service}/{method}"));
+            InitApiService(config, builder, new HttpRoute("api/svc/{service}/{method}", new HttpRouteValueDictionary { { "service", "" }, { "method", "Index" } }));
+        }
+        public static void InitApiService(this HttpConfiguration config, ContainerBuilder builder, HttpRoute route)
+        {
+            config.Routes.Add("api", route);
             config.Services.Replace(typeof(IHttpControllerSelector), new HttpControllerSelect(config));
             builder.RegisterType<DynamicController>().AsSelf();
             builder.RegisterType<ServiceAction>().AsImplementedInterfaces();
