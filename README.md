@@ -19,6 +19,8 @@ WebHost:
 
 Test:  
 
->http://localhost:10000/api/svc
+- 运行项目
 
-显示HelloWorld即表示成功
+- 浏览器打开http://localhost:10000/api/svc
+
+- 显示HelloWorld即表示成功
