@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.ApiService", "Autofac.Extras.ApiService\Autofac.Extras.ApiService.csproj", "{6F84ABF7-3F69-45CE-BB2F-B47303A42D34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService.SelfHost", "ApiService.SelfHost\ApiService.SelfHost.csproj", "{A27BAE30-6304-4830-A9E4-05E13FBFDA26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6F84ABF7-3F69-45CE-BB2F-B47303A42D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F84ABF7-3F69-45CE-BB2F-B47303A42D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F84ABF7-3F69-45CE-BB2F-B47303A42D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27BAE30-6304-4830-A9E4-05E13FBFDA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27BAE30-6304-4830-A9E4-05E13FBFDA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27BAE30-6304-4830-A9E4-05E13FBFDA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27BAE30-6304-4830-A9E4-05E13FBFDA26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

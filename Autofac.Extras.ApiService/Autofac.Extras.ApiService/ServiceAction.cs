@@ -10,14 +10,16 @@ namespace Autofac.Extras.ApiService
 {
     public class ServiceAction: IServiceAction
     {
-        private ILifetimeScope _container;
+        private readonly ILifetimeScope _container;
         public ServiceAction(ILifetimeScope container)
         {
             _container = container;
         }
         public object Action(string controllerName, string actionName, string data)
         {
-            var types = Assembly.GetCallingAssembly().GetTypes();
+            var regits = _container.ComponentRegistry.Registrations;
+            var types = regits.Select(x => x.Activator.LimitType);
+            //var types = Assembly.GetCallingAssembly().GetTypes();
             var type = types.First(x => x.Name.ToLower() == controllerName);
             var user = _container.Resolve(type);
             var methods = user.GetType().GetMethods();
