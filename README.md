@@ -2,7 +2,7 @@
 让Service自动变成Web API
 
 
-SelfHost:
+*SelfHost:*
 ```csharp
 using (var server = new HttpSelfHostServer(new HttpSelfHostConfiguration("http://localhost:10000")))
 {
@@ -13,11 +13,11 @@ using (var server = new HttpSelfHostServer(new HttpSelfHostConfiguration("http:/
 ```
 
 
-WebHost:
+*WebHost:*
 
 
 
-Test:  
+*Test:  *
 
 - 运行项目
 
