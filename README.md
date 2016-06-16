@@ -14,9 +14,11 @@ using (var server = new HttpSelfHostServer(new HttpSelfHostConfiguration("http:/
 
 
 ###WebHost
+```csharp
 var builder = new ContainerBuilder();
 GlobalConfiguration.Configuration.InitApiService(builder);
 ...
+```
 
 ###Test
 
