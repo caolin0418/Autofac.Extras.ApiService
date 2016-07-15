@@ -27,3 +27,10 @@ GlobalConfiguration.Configuration.InitApiService(builder);
 - 浏览器打开http://localhost:10000/api/svc
 
 - 显示HelloWorld即表示成功
+
+
+###限制
+
+- 只支持从报文体中对参数赋值
+- 方法名不支持重名
+- 使用该方式将自动取消Web API默认功能
